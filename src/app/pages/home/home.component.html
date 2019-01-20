@@ -1,0 +1,28 @@
+<br>
+<div class="row container">
+    <cdk-virtual-scroll-viewport itemSize="500" class="list" autosize>
+        <div class="col s12" *cdkVirtualFor="let new of _news.news; let i = index;">
+            <div class="card">
+                <div class="card-image">
+                    <a [routerLink]="['/detalle', {'data': i}]" [title]="new.title">
+                        <img [src]="new.thubnail">
+                    </a>
+                    <span class="card-title">{{new.title}}</span>
+                </div>
+                <div class="card-content">
+
+                    <p [hidden]="new.showinfo" [innerHTML]="new.excerpt"></p>
+                    <p [hidden]="!new.showinfo" [innerHTML]="new.content"></p>
+
+                </div>
+
+                <div class="card-action">
+                    <a (click)="showHideInfo(i)">
+                        <span [hidden]="new.showinfo">Más Información</span>
+                        <span [hidden]="!new.showinfo">Menos Información</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </cdk-virtual-scroll-viewport>
+</div>
