@@ -4,7 +4,7 @@
         <div class="card-panel teal white-text" [ngStyle]="{'float':'left'}">
             <div class="col s12">
                 <a [routerLink]="['/']" class="white-text"><i class="material-icons">home</i></a>
-                <h1>{{ detalle.title }}</h1>
+                <h1 [innerHTML]="detalle.title"></h1>
                 <strong><i>{{ detalle.date }}</i></strong>
                 <br><br>
                 <img [src]="detalle.fullimg" [title]="detalle.title" [alt]="detalle.title" width="100%" />

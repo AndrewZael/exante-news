@@ -1,7 +1,7 @@
 <br>
 <div class="row container">
     <cdk-virtual-scroll-viewport itemSize="500" class="list" autosize>
-        <div class="col s12" *cdkVirtualFor="let new of _news.news; let i = index;">
+        <div class="col s6" *cdkVirtualFor="let new of _news.news; let i = index;">
             <div class="card">
                 <div class="card-image">
                     <a [routerLink]="['/detalle', {'data': i}]" [title]="new.title">

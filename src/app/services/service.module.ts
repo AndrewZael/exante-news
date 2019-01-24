@@ -4,13 +4,18 @@ import { HttpModule } from '@angular/http';
 
 import { NewsService } from './news/news.service';
 
+import { CanActivateViaAuthGuard } from './guards/auth-guard.service';
+import { LoginService } from './login/login.service';
+
 @NgModule({
   imports: [
     CommonModule,
     HttpModule
   ],
   providers: [
-    NewsService
+    NewsService,
+    CanActivateViaAuthGuard,
+    LoginService
   ],
   declarations: []
 })

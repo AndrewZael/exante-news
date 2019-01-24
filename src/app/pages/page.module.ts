@@ -13,6 +13,7 @@ import { APP_ROUTES } from '../app.routes';
 
 // Scrolling
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { ProfileComponent } from './profile/profile.component';
 
 // Material
 // import { MaterialModule } from '../material/material.module';
@@ -30,7 +31,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   declarations: [
     HomeComponent,
     DetalleComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    ProfileComponent
   ]
 })
 export class PageModule { }
